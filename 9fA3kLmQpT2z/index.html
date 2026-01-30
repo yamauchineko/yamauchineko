@@ -144,6 +144,31 @@
     font-size:13px;
     color:var(--subtle);
   }
+  .photo-row{
+    display:flex;
+    gap:14px;
+    margin-top:18px;
+  }
+
+  .photo-row img{
+    width:50%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border-radius:14px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.12);
+    border:1px solid var(--line);
+  }
+
+  /* スマホが極端に細い時は縦並び */
+  @media(max-width:360px){
+    .photo-row{
+      flex-direction:column;
+    }
+    .photo-row img{
+      width:100%;
+    }
+  }
+
   </style>
 </head>
 
@@ -198,6 +223,12 @@
         <li>賃貸不動産経営管理士合格（未登録）</li>
         <li>管理業務主任者合格（未登録）</li>
       </ul>
+
+      <div class="photo-row">
+        <img src="cat.jpg" alt="Cat">
+        <img src="mountain.jpg" alt="Mountain hiking">
+      </div>
+
     </section>
   </main>
 </body>
