@@ -8,150 +8,136 @@
   <title>山内 聡 | Digital Card</title>
 
   <style>
-    :root{
-      --bg: #0b0d12;
-      --card: rgba(255,255,255,0.06);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.70);
-      --subtle: rgba(255,255,255,0.55);
-      --line: rgba(255,255,255,0.10);
-      --accent: rgba(255,255,255,0.92);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius: 18px;
-    }
+  :root{
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --text:#1e293b;
+    --muted:#475569;
+    --subtle:#64748b;
+    --line:#e2e8f0;
+    --accent:#2563eb;
+    --shadow:0 10px 25px rgba(0,0,0,0.08);
+    --radius:18px;
+  }
 
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg: #f6f7fb;
-        --card: rgba(0,0,0,0.04);
-        --text: rgba(0,0,0,0.88);
-        --muted: rgba(0,0,0,0.66);
-        --subtle: rgba(0,0,0,0.52);
-        --line: rgba(0,0,0,0.10);
-        --accent: rgba(0,0,0,0.88);
-        --shadow: 0 10px 30px rgba(0,0,0,0.10);
-      }
-    }
+  *{box-sizing:border-box;}
 
-    *{ box-sizing: border-box; }
-    body{
-      margin:0;
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,0.10), transparent 60%),
-                  radial-gradient(800px 500px at 90% 30%, rgba(255,255,255,0.08), transparent 55%),
-                  var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-                   "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
-      line-height: 1.55;
-    }
+  body{
+    margin:0;
+    background:
+      radial-gradient(900px 500px at 10% 10%, rgba(37,99,235,0.08), transparent 60%),
+      radial-gradient(700px 450px at 90% 20%, rgba(14,165,233,0.06), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,
+                "Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+    line-height:1.55;
+  }
 
-    main{
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 28px 16px 40px;
-    }
+  main{
+    max-width:720px;
+    margin:0 auto;
+    padding:28px 16px 40px;
+  }
 
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px 18px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px 20px;
+  }
 
-    .header{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 14px;
-      margin-bottom: 14px;
-    }
+  .name{
+    margin:0;
+    font-size:22px;
+  }
 
-    .name{
-      margin: 0;
-      font-size: 22px;
-      letter-spacing: 0.2px;
-    }
-    .name small{
-      display:block;
-      margin-top: 4px;
-      font-weight: 600;
-      font-size: 13px;
-      color: var(--muted);
-      letter-spacing: 0.6px;
-      text-transform: none;
-    }
+  .name small{
+    display:block;
+    margin-top:4px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:0.5px;
+  }
 
-    .role{
-      margin: 10px 0 0;
-      font-size: 14px;
-      color: var(--muted);
-    }
+  .role{
+    margin:10px 0 0;
+    font-size:14px;
+    color:var(--muted);
+  }
 
-    .divider{
-      height:1px;
-      background: var(--line);
-      margin: 16px 0;
-    }
+  .divider{
+    height:1px;
+    background:var(--line);
+    margin:18px 0;
+  }
 
-    .section-title{
-      margin: 0 0 10px;
-      font-size: 12px;
-      color: var(--subtle);
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
+  .section-title{
+    margin:0 0 10px;
+    font-size:12px;
+    color:var(--subtle);
+    letter-spacing:0.8px;
+    text-transform:uppercase;
+  }
 
-    .links{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
 
-    a{
-      color: var(--accent);
-      text-decoration: none;
-    }
+  a{
+    text-decoration:none;
+    color:var(--text);
+  }
 
-    .pill{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-    }
+  .pill{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:13px 14px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#f9fbff;
+  }
 
-    .pill .label{
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .pill .value{
-      font-weight: 600;
-      font-size: 14px;
-      overflow-wrap:anywhere;
-      text-align: right;
-    }
+  .pill:hover{
+    border-color:#c7d2fe;
+    background:#f1f5ff;
+  }
 
-    .certs{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .certs li{ margin: 6px 0; }
+  .label{
+    font-size:12px;
+    color:var(--subtle);
+  }
 
-    /* スマホで気持ちよく */
-    @media (max-width: 420px){
-      .name{ font-size: 20px; }
-      .card{ padding: 18px 14px; }
-      .pill{ padding: 11px 11px; }
-      .pill .value{ font-size: 13px; }
-    }
+  .value{
+    font-weight:600;
+    font-size:14px;
+    text-align:right;
+    overflow-wrap:anywhere;
+  }
+
+  .certs{
+    margin:0;
+    padding-left:18px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .certs li{
+    margin:7px 0;
+  }
+
+  .sub{
+    font-size:12px;
+    color:var(--subtle);
+  }
+
+  @media(max-width:420px){
+    .name{font-size:20px;}
+    .card{padding:18px 16px;}
+  }
   </style>
 </head>
 
