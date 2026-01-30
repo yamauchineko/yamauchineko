@@ -4,14 +4,195 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="color-scheme" content="light dark" />
   <title>山内 聡 | Digital Card</title>
-</head>
-<body>
-  <main style="max-width:680px;margin:40px auto;padding:0 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,'Hiragino Kaku Gothic ProN','Noto Sans JP','Yu Gothic',sans-serif;">
-    <h1 style="margin:0 0 8px;">山内 聡 / Satoshi YAMAUCHI</h1>
-    <p style="margin:0 0 24px;">Web Engineer / Product Builder</p>
 
-    <p style="margin:0 0 8px;"><a href="mailto:yamauchi.nekoru@example.com">メールアドレス</a></p>
+  <style>
+    :root{
+      --bg: #0b0d12;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --subtle: rgba(255,255,255,0.55);
+      --line: rgba(255,255,255,0.10);
+      --accent: rgba(255,255,255,0.92);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --card: rgba(0,0,0,0.04);
+        --text: rgba(0,0,0,0.88);
+        --muted: rgba(0,0,0,0.66);
+        --subtle: rgba(0,0,0,0.52);
+        --line: rgba(0,0,0,0.10);
+        --accent: rgba(0,0,0,0.88);
+        --shadow: 0 10px 30px rgba(0,0,0,0.10);
+      }
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(255,255,255,0.10), transparent 60%),
+                  radial-gradient(800px 500px at 90% 30%, rgba(255,255,255,0.08), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+                   "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+      line-height: 1.55;
+    }
+
+    main{
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 16px 40px;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 18px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .header{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .name{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+    .name small{
+      display:block;
+      margin-top: 4px;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.6px;
+      text-transform: none;
+    }
+
+    .role{
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 16px 0;
+    }
+
+    .section-title{
+      margin: 0 0 10px;
+      font-size: 12px;
+      color: var(--subtle);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    a{
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .pill{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .pill .label{
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .pill .value{
+      font-weight: 600;
+      font-size: 14px;
+      overflow-wrap:anywhere;
+      text-align: right;
+    }
+
+    .certs{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .certs li{ margin: 6px 0; }
+
+    /* スマホで気持ちよく */
+    @media (max-width: 420px){
+      .name{ font-size: 20px; }
+      .card{ padding: 18px 14px; }
+      .pill{ padding: 11px 11px; }
+      .pill .value{ font-size: 13px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="card">
+      <div class="header">
+        <div>
+          <h1 class="name">山内 聡 <small>Satoshi YAMAUCHI</small></h1>
+          <p class="role">Web Engineer / Real Estate Executive Officer</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">Contact</h2>
+      <div class="links">
+        <a class="pill" href="mailto:YOUR_WORK_EMAIL@example.com?subject=ご連絡">
+          <span class="label">Email (Work)</span>
+          <span class="value">YOUR_WORK_EMAIL@example.com</span>
+        </a>
+
+        <a class="pill" href="mailto:YOUR_PERSONAL_EMAIL@example.com?subject=ご連絡">
+          <span class="label">Email (Personal)</span>
+          <span class="value">YOUR_PERSONAL_EMAIL@example.com</span>
+        </a>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="section-title">Certifications</h2>
+      <ul class="certs">
+        <li>AWS Certified Solutions Architect – Associate (SAA)</li>
+        <li>宅地建物取引士</li>
+        <li>マンション管理士</li>
+        <li>賃貸不動産経営管理士</li>
+        <li>管理業務主任者</li>
+        <li>行政書士</li>
+        <li>FP2級技能士</li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>
